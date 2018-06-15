@@ -168,20 +168,20 @@ RCT_EXPORT_METHOD(stopUpdatingLocation)
                           @"horizontalAccuracy": @(location.horizontalAccuracy),
                           @"verticalAccuracy": @(location.verticalAccuracy),
                           @"coordinate": @{
-                                  @"latitude": @(location.coordinate.latitude),
-                                  @"longitude": @(location.coordinate.longitude),
+                                  @"latitude": CLLocationCoordinate2DIsValid(location.coordinate) ? @(location.coordinate.latitude) : @(0),
+                                  @"longitude": CLLocationCoordinate2DIsValid(location.coordinate) ? @(location.coordinate.longitude) : @(0),
                                   },
-                          @"formattedAddress": regeocode.formattedAddress,
-                          @"country": regeocode.country,
-                          @"province": regeocode.province,
-                          @"city": regeocode.city,
-                          @"district": regeocode.district,
-                          @"citycode": regeocode.citycode,
-                          @"adcode": regeocode.adcode,
-                          @"street": regeocode.street,
-                          @"number": regeocode.number,
-                          @"POIName": regeocode.POIName,
-                          @"AOIName": regeocode.AOIName
+                          @"formattedAddress": regeocode.formattedAddress?regeocode.formattedAddress:@"",
+                          @"country": regeocode.country?regeocode.country:@"",
+                          @"province": regeocode.province?regeocode.province:@"",
+                          @"city": regeocode.city?regeocode.city:@"",
+                          @"district": regeocode.district?regeocode.district:@"",
+                          @"citycode": regeocode.citycode?regeocode.citycode:@"",
+                          @"adcode": regeocode.adcode?regeocode.adcode:@"",
+                          @"street": regeocode.street?regeocode.street:@"",
+                          @"number": regeocode.number?regeocode.number:@"",
+                          @"POIName": regeocode.POIName?regeocode.POIName:@"",
+                          @"AOIName": regeocode.AOIName?regeocode.AOIName:@""
                           };
         }
         else {
@@ -189,8 +189,8 @@ RCT_EXPORT_METHOD(stopUpdatingLocation)
                           @"horizontalAccuracy": @(location.horizontalAccuracy),
                           @"verticalAccuracy": @(location.verticalAccuracy),
                           @"coordinate": @{
-                                  @"latitude": @(location.coordinate.latitude),
-                                  @"longitude": @(location.coordinate.longitude),
+                                  @"latitude": CLLocationCoordinate2DIsValid(location.coordinate) ? @(location.coordinate.latitude) : @(0),
+                                  @"longitude": CLLocationCoordinate2DIsValid(location.coordinate) ? @(location.coordinate.longitude) : @(0),
                                   }
                           };
             
