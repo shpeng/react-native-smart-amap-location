@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shpeng/react-native-smart-amap-location.git"
+    "url": "git+https://github.com/shpeng/react-native-smart-amap-location-s4s.git"
   },
   "keywords": [
     "react-native",
@@ -20,7 +20,7 @@
   "author": "HISAME SHIZUMARU",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/shpeng/react-native-smart-amap-location/issues"
+    "url": "https://github.com/shpeng/react-native-smart-amap-location-s4s/issues"
   },
-  "homepage": "https://github.com/shpeng/react-native-smart-amap-location#readme"
+  "homepage": "https://github.com/shpeng/react-native-smart-amap-location-s4s#readme"
 }
